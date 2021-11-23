@@ -36,5 +36,3 @@ class Bot(ABC):
     @abstractmethod
     def despedida():
         pass
-
-    #mudança
