@@ -8,12 +8,12 @@ class BotTriste(Bot):
     def nome(self):
         return(self.__nome)
 
-@nome.setter
+    @nome.setter
     def nome(self, nome):
         self.__nome = nome
 
     def apresentacao(self):
-        return(f"Eu sou {self.nome()}, me empresta dinheiro pra comprar café?")
+        return(f"Eu sou {self.nome}, me empresta dinheiro pra comprar café?")
  
     def mostra_comandos(self):
         return("1 - Bom dia\n2 - Qual o seu nome?\n3 - Quero um conselho\n4 - Adeus")
@@ -23,7 +23,7 @@ class BotTriste(Bot):
         if cmd == 1:
             return(self.boas_vindas())
         if cmd == 2:
-            return(f"Eu sou {self.nome()}, perguntas repetidas me deixam triste e cansado")
+            return(f"Eu sou {self.nome}, perguntas repetidas me deixam triste e cansado")
         if cmd == 3:
             return(self.conselho())
         if cmd == 4:

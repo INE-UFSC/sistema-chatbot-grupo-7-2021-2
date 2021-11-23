@@ -13,7 +13,7 @@ class BotZangado(Bot):
         self.__nome = nome
 
     def apresentacao(self):
-        return(f"Grrrrrr. Meu nome é {self.nome()} e eu te odeio!")
+        return(f"Grrrrrr. Meu nome é {self.nome} e eu te odeio!")
  
     def mostra_comandos(self):
         return("1 - Bom dia\n2 - Qual o seu nome?\n3 - Quero um conselho\n4 - Adeus")
@@ -22,7 +22,7 @@ class BotZangado(Bot):
         if cmd == 1:
             return(self.boas_vindas())
         if cmd == 2:
-            return(f"{self.nome()}, quantas tenho tenho que repetir?")
+            return(f"{self.nome}, quantas tenho tenho que repetir?")
         if cmd == 3:
             return(self.conselho())
         if cmd == 4:
