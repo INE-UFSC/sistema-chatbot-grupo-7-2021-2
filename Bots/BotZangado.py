@@ -4,25 +4,37 @@ class BotZangado(Bot):
     def __init__(self,nome):
         self.__nome = nome
 
-    #nao esquecer o decorator
+    @property
     def nome(self):
-        pass
+        return(self.__nome)
 
-    #nao esquecer o decorator
-    def nome(nome):
-        pass
+    @nome.setter
+    def nome(self, nome):
+        self.__nome = nome
 
     def apresentacao(self):
-        pass
+        return(f"Grrrrrr. Meu nome é {self.nome()} e eu te odeio!")
  
     def mostra_comandos(self):
-        pass
+        return("1 - Bom dia\n2 - Qual o seu nome?\n3 - Quero um conselho\n4 - Adeus")
     
     def executa_comando(self,cmd):
-        pass
+        if cmd == 1:
+            return(self.boas_vindas())
+        if cmd == 2:
+            return(f"{self.nome()}, quantas tenho tenho que repetir?")
+        if cmd == 3:
+            return(self.conselho())
+        if cmd == 4:
+            return(self.despedida())
+        else:
+            return ("Comando inválido")
 
     def boas_vindas(self):
-        pass
+        return("Olá, como você vai me encher o saco hoje?")
+    
+    def conselho(self):
+        return("Não tenho filho desse tamanho.")
 
     def despedida(self):
-        pass
+        return("Já vai tarde. Adeus.")
