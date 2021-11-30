@@ -4,6 +4,8 @@ from Bots.BotFeliz import BotFeliz
 from Bots.BotTriste import BotTriste
 
 class SistemaChatBot:
+    lista_bots_ = []
+    
     def __init__(self,nomeEmpresa,lista_bots):
         self.__empresa=nomeEmpresa
         for i in lista_bots:
@@ -25,6 +27,7 @@ class SistemaChatBot:
         
         if num_bot == 0:
             self.__bot = BotZangado('Yoda')
+            SistemaChatBot.lista_bots_.append(self.__bot)
         elif num_bot == 1:
             self.__bot = BotFeliz('Feliciano')
         elif num_bot == 2: 
@@ -36,12 +39,9 @@ class SistemaChatBot:
         print(self.__bot.mostra_comandos())
         
     def le_envia_comando(self):
-        global sair
         comando = int(input('Digite o comando desejado (ou -1 para fechar o comando):'))
-        sair = False
         if comando == -1:
-            sair = True
-            pass
+            return 'sair'
         else: 
             print(self.__bot.executa_comando(comando))
 
@@ -52,5 +52,5 @@ class SistemaChatBot:
         while True:
             self.mostra_comandos_bot()
             self.le_envia_comando()
-            if sair == True:
+            if self.le_envia_comando() == 'sair':
                 break

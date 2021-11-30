@@ -14,7 +14,7 @@ class BotFeliz(Bot):
         if cmd == 1:
             return(self.boas_vindas())
         if cmd == 2:
-            return(f"{self.nome()} :D")
+            return(f"{self.nome} :D")
         if cmd == 3:
             return(self.conselho())
         if cmd == 4:
