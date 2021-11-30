@@ -1,7 +1,4 @@
 from Bots.Bot import Bot
-from Bots.BotZangado import BotZangado
-from Bots.BotFeliz import BotFeliz
-from Bots.BotTriste import BotTriste
 
 class SistemaChatBot:    
     def __init__(self,nomeEmpresa,lista_bots):
@@ -22,7 +19,7 @@ class SistemaChatBot:
     
     def escolhe_bot(self):
         while True:
-            num_bot = input('Digite o número do chat bot desejado:')
+            num_bot = input('Digite o número do chat bot desejado: ')
             if not num_bot.isnumeric():
                 print("Erro. Escolha um número")
             elif int(num_bot) > len(self.__lista_bots) or int(num_bot) < 1:
@@ -37,7 +34,7 @@ class SistemaChatBot:
         print(self.__bot.mostra_comandos())
         
     def le_envia_comando(self):
-        comando = int(input('Digite o comando desejado (ou -1 para fechar o comando):'))
+        comando = int(input('Digite o comando desejado (ou -1 para fechar o comando): '))
         if comando == -1:
             return True
         else: 

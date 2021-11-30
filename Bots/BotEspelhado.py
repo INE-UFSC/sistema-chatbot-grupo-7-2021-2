@@ -24,7 +24,7 @@ class BotEspelhado(Bot):
         return msg
  
     def mostra_comandos(self):
-        return " ".join(self.__tipo_comando)
+        return "\n".join(self.__tipo_comando)
     
     def executa_comando(self,cmd):
         try:

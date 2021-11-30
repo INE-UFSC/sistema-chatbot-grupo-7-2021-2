@@ -21,7 +21,7 @@ class BotCansado(Bot):
         comandos = ["1 - Apresentar",
                 "2 - Mostrar um conselho",
                 "3 - Mostrar despedida"]
-        return ", ".join(comandos)
+        return "\n".join(comandos)
     
     def executa_comando(self,cmd):
         if cmd == 1:

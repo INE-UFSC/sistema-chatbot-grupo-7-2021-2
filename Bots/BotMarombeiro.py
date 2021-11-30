@@ -21,7 +21,10 @@ class BotMarombeiro(Bot):
         return "Treino e dieta eu não furo, tá ligado?"
  
     def mostra_comandos(self):
-        return self.__comandos
+        retorno = ""
+        for key in list(self.__comandos.keys()):
+            retorno += "\n"+key
+        return retorno
     
     def executa_comando(self,cmd):
         try:
