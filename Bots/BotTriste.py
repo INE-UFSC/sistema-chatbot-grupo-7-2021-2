@@ -19,7 +19,6 @@ class BotTriste(Bot):
         return("1 - Bom dia\n2 - Qual o seu nome?\n3 - Quero um conselho\n4 - Adeus")
     
     def executa_comando(self,cmd):
-
         if cmd == 1:
             return(self.boas_vindas())
         if cmd == 2:
