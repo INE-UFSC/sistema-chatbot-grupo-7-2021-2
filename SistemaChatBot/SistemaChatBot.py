@@ -39,7 +39,7 @@ class SistemaChatBot:
     def le_envia_comando(self):
         comando = int(input('Digite o comando desejado (ou -1 para fechar o comando):'))
         if comando == -1:
-            return 'sair'
+            return True
         else: 
             print(self.__bot.executa_comando(comando))
 
@@ -49,5 +49,4 @@ class SistemaChatBot:
         self.escolhe_bot()
         while True:
             self.mostra_comandos_bot()
-            if self.le_envia_comando() == 'sair':
-                break
+            if self.le_envia_comando(): break
